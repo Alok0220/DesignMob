@@ -18,6 +18,7 @@ public class HomeActivity extends AppCompatActivity {
 
     SharedPreferences sharedpreferences;
     String email;
+    String password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,5 +49,20 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+
+        email = sharedpreferences.getString(EMAIL_KEY, null);
+        password = sharedpreferences.getString(PASSWORD_KEY, null);
+
+        if(email == null && password == null){
+            Intent i = new Intent(HomeActivity.this, Dashboard.class);
+
+            startActivity(i);
+            //finish();
+        }
     }
 }
