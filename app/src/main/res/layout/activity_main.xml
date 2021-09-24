@@ -15,6 +15,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:src="@drawable/shop"
+        android:transitionName="logo_img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,6 +26,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:includeFontPadding="false"
+        android:transitionName="logo_text"
         android:text="SHOP APP"
         android:textAlignment="center"
         android:textSize="35sp"

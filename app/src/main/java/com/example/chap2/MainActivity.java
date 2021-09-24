@@ -2,10 +2,13 @@ package com.example.chap2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Pair;
 import android.view.TextureView;
+import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -42,8 +45,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent intent = new Intent(MainActivity.this, Dashboard.class);
-                startActivity( intent );
-                finish(); //imp
+                //startActivity( intent );
+                //finish(); //imp
+
+                Pair[] pairs = new Pair[2];
+                pairs[0] = new Pair<View, String>(image, "logo_img");
+                pairs[1] = new Pair<View, String>(logo, "logo_text");
+
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, pairs);
+                startActivity(intent,options.toBundle());
+                finish();
             }
         }, SPLASH_SCREEN);
     }
