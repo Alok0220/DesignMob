@@ -9,7 +9,7 @@
     android:background="#fff">
 
     <ImageView
-        android:id="@+id/logo_img"
+        android:id="@+id/dash_logo_img"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/shop_min"
@@ -17,15 +17,20 @@
         />
 
     <TextView
+        android:id="@+id/welComeTextId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:transitionName="logo_text"
         android:text="Welcome"
         android:textSize="25sp" />
 
     <TextView
+        android:id="@+id/signUpTextId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SignUp Now"
+        android:transitionName="logo_text"
         android:textSize="15sp" />
 
     <LinearLayout
