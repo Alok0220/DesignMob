@@ -62,6 +62,18 @@ public class Dashboard extends AppCompatActivity {
                 }
             }
         });
+
+        Button signUpBtn = findViewById(R.id.signUpId);
+
+        signUpBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Dashboard.this, RegisterActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
     }
 
     @Override
