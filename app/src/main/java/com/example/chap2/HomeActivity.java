@@ -7,8 +7,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -29,8 +32,8 @@ public class HomeActivity extends AppCompatActivity {
 
         email = sharedpreferences.getString(EMAIL_KEY, null);
 
-        TextView welocomeTV = findViewById(R.id.showEmailId);
-        welocomeTV.setText("Welcome \n"+ email);
+        //TextView welocomeTV = findViewById(R.id.showEmailId);
+        //welocomeTV.setText("Welcome \n"+ email);
         Button logoutBtn = findViewById(R.id.logoutId);
 
         logoutBtn.setOnClickListener(new View.OnClickListener(){
@@ -50,6 +53,13 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
+        GridView gv = (GridView) findViewById(R.id.gviewId);
+        gv.setAdapter(new ImageAdapter(this));
+        gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                Toast.makeText(HomeActivity.this, "Image Position: " + position, Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
