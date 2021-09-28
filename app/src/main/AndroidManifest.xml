@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chap2">
         <activity
+            android:name=".ProductActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SellActivity"
+            android:exported="true" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="true" />
         <activity

@@ -35,7 +35,10 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
+<GridLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
         <GridView
             android:id="@+id/gviewId"
@@ -48,7 +51,7 @@
             android:stretchMode="columnWidth"
             android:gravity="center"
             />
-
+</GridLayout>
 
 
 </LinearLayout>

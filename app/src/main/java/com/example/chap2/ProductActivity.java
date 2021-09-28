@@ -10,10 +10,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-public class HomeActivity extends AppCompatActivity {
+public class ProductActivity extends AppCompatActivity {
 
     public static final String SHARED_PREFS = "shared_prefs";
     public static final String EMAIL_KEY = "email_key";
@@ -46,7 +44,7 @@ public class HomeActivity extends AppCompatActivity {
 
                 editor.apply();
 
-                Intent i = new Intent(HomeActivity.this, Dashboard.class);
+                Intent i = new Intent(ProductActivity.this, Dashboard.class);
                 startActivity(i);
                 finish();
             }
@@ -54,11 +52,11 @@ public class HomeActivity extends AppCompatActivity {
 
 
         GridView gv = (GridView) findViewById(R.id.gviewId);
-        gv.setAdapter(new ImageAdapter(this));
+        gv.setAdapter(new ImageProductAdapter(this));
         gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 //Toast.makeText(HomeActivity.this, "Image Position: " + position, Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(HomeActivity.this, ProductActivity.class);
+                Intent i = new Intent(ProductActivity.this, SellActivity.class);
 
                 i.putExtra("id", position);
                 startActivity(i);
@@ -76,7 +74,7 @@ public class HomeActivity extends AppCompatActivity {
         password = sharedpreferences.getString(PASSWORD_KEY, null);
 
         if(email == null && password == null){
-            Intent i = new Intent(HomeActivity.this, Dashboard.class);
+            Intent i = new Intent(ProductActivity.this, Dashboard.class);
 
             startActivity(i);
             //finish();
