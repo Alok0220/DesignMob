@@ -114,7 +114,7 @@ public class Dashboard extends AppCompatActivity {
             Intent i = new Intent(Dashboard.this, HomeActivity.class);
 
             startActivity(i);
-            //finish();
+            finish();
         }
     }
 
