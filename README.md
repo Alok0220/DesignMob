@@ -5,5 +5,5 @@ Design App
 
 ### Recent Changes Not Yet On GitHub
 
-Change Number of Store - 29/9/21
-Database creation on SQLite - 29/9/21
+#### Change Number of Store - 29/9/21
+#### Database creation on SQLite - 29/9/21
