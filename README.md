@@ -8,4 +8,4 @@ Design App
 #### Change Number of Store - 29/9/21
 #### Database creation on SQLite - 29/9/21
 #### ----
-#### Get data from Database to Screen - 30/9/21
+#### Fetch Data to View - 30/9/21
