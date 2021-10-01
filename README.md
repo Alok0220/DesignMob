@@ -12,4 +12,4 @@ Design App
 #### ----
 #### Network Related - 02/10/21 - 03/10/21
 #### ----
-#### Final Tasks - Weekend tasks
+#### Final Tasks -
