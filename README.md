@@ -11,3 +11,5 @@ Design App
 #### Fetch Data to View - 30/9/21
 #### ----
 #### Network Related - 01/10/21 - 03/10/21
+#### ----
+#### Final Tasks - 
