@@ -9,3 +9,5 @@ Design App
 #### Database creation on SQLite - 29/9/21
 #### ----
 #### Fetch Data to View - 30/9/21
+#### ----
+#### Network Related - 01/10/21 - 03/10/21
