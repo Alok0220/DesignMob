@@ -20,4 +20,4 @@ Design App
 
 ### Recent Changes Committed On GitHub
 
-#### Change UI Design - 02/10/21 - 03/10/21
+#### Change UI Design -
