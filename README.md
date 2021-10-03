@@ -14,7 +14,7 @@ Design App
 #### Fetch Data to View - 30/9/21
 #### ----
 #### Network Related - 02/10/21 - 03/10/21
-#### Change UI Design - 02/10/21 - 03/10/21
+#### Change UI Design - 02/10/21 - 03/10/21 - commit 
 #### ----
 #### Final Tasks -
 
