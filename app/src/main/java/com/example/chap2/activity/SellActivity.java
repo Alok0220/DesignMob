@@ -1,10 +1,13 @@
-package com.example.chap2;
+package com.example.chap2.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
+
+import com.example.chap2.R;
+import com.example.chap2.adapter.ImageProductAdapter;
 
 public class SellActivity extends AppCompatActivity {
 

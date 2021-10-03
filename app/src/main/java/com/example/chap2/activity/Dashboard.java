@@ -1,4 +1,4 @@
-package com.example.chap2;
+package com.example.chap2.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,6 +18,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.chap2.R;
 
 public class Dashboard extends AppCompatActivity {
 

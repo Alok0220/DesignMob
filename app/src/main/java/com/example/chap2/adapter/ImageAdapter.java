@@ -1,4 +1,4 @@
-package com.example.chap2;
+package com.example.chap2.adapter;
 
 import android.content.Context;
 import android.view.View;
@@ -6,6 +6,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+
+import com.example.chap2.R;
 
 public class ImageAdapter extends BaseAdapter {
 
