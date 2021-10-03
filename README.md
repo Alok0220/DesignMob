@@ -6,7 +6,7 @@ Design App
 
 ### --------------------------------------------------------
 
-### Recent Changes Completed, Not Committed On GitHub
+### Recent Changes, Not Committed On GitHub
 
 #### Change Number of Store - 29/9/21 
 #### Database creation on SQLite - 29/9/21  
