@@ -63,7 +63,7 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
-        /*GridView gv = (GridView) findViewById(R.id.gviewId);
+        /*GridView gv = (GridView) findViewById(R.id.gviewProId);
         gv.setAdapter(new ImageAdapter(this));
         gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
@@ -97,6 +97,8 @@ public class HomeActivity extends AppCompatActivity {
 
         dataList.setLayoutManager(gridLayoutManager);
         dataList.setAdapter(adapter);
+
+
 
     }
 

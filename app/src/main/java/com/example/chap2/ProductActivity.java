@@ -24,7 +24,7 @@ public class ProductActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_product);
 
         sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
 
@@ -32,7 +32,7 @@ public class ProductActivity extends AppCompatActivity {
 
         //TextView welocomeTV = findViewById(R.id.showEmailId);
         //welocomeTV.setText("Welcome \n"+ email);
-        Button logoutBtn = findViewById(R.id.logoutId);
+        Button logoutBtn = findViewById(R.id.logoutProId);
 
         logoutBtn.setOnClickListener(new View.OnClickListener(){
 
@@ -51,7 +51,7 @@ public class ProductActivity extends AppCompatActivity {
         });
 
 
-        /*GridView gv = (GridView) findViewById(R.id.gviewId);
+        GridView gv = (GridView) findViewById(R.id.gviewProId);
         gv.setAdapter(new ImageProductAdapter(this));
         gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
@@ -62,7 +62,7 @@ public class ProductActivity extends AppCompatActivity {
                 startActivity(i);
 
             }
-        });*/
+        });
 
     }
 

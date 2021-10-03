@@ -2,9 +2,11 @@ package com.example.chap2;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,13 +19,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     List<String> titles;
     List<Integer> images;
-    //Context context;
+    Context context;
     LayoutInflater inflater;
 
     public RecyclerAdapter(Context ctx, List<String> titles, List<Integer> images){
         this.titles = titles;
         this.images = images;
         this.inflater = LayoutInflater.from(ctx);
+        context = ctx;
     }
 
     @NonNull
@@ -53,6 +56,28 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             super(itemView);
             title = itemView.findViewById(R.id.textCardId);
             gridIcon = itemView.findViewById(R.id.cardImgId);
+
+            /*itemView.setOnClickListener(new AdapterView.OnItemClickListener() {
+                public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                    //Toast.makeText(HomeActivity.this, "Image Position: " + position, Toast.LENGTH_SHORT).show();
+
+                    Intent i = new Intent(HomeActivity.this, ProductActivity.class);
+
+                    i.putExtra("id", position);
+                    context.startActivity(i);
+
+                }
+            });*/
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(context, ProductActivity.class);
+
+                    //i.putExtra("id", position);
+                    context.startActivity(i);
+                }
+            });
         }
     }
 }
