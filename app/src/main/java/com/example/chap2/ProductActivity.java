@@ -51,7 +51,7 @@ public class ProductActivity extends AppCompatActivity {
         });
 
 
-        GridView gv = (GridView) findViewById(R.id.gviewId);
+        /*GridView gv = (GridView) findViewById(R.id.gviewId);
         gv.setAdapter(new ImageProductAdapter(this));
         gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
@@ -62,7 +62,7 @@ public class ProductActivity extends AppCompatActivity {
                 startActivity(i);
 
             }
-        });
+        });*/
 
     }
 

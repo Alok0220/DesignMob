@@ -1,6 +1,8 @@
 package com.example.chap2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +15,9 @@ import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HomeActivity extends AppCompatActivity {
 
     public static final String SHARED_PREFS = "shared_prefs";
@@ -22,6 +27,11 @@ public class HomeActivity extends AppCompatActivity {
     SharedPreferences sharedpreferences;
     String email;
     String password;
+
+    RecyclerView dataList;
+    List<String> titles;
+    List<Integer> images11;
+    RecyclerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +63,7 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
-        GridView gv = (GridView) findViewById(R.id.gviewId);
+        /*GridView gv = (GridView) findViewById(R.id.gviewId);
         gv.setAdapter(new ImageAdapter(this));
         gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
@@ -64,7 +74,29 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(i);
 
             }
-        });
+        });*/
+
+        dataList = findViewById(R.id.recyclerId);
+
+        titles = new ArrayList<>();
+        images11 = new ArrayList<>();
+
+        titles.add("First");
+        titles.add("Second");
+        titles.add("Thrid");
+        titles.add("Fourth");
+
+        images11.add(R.drawable.images2);
+        images11.add(R.drawable.images3);
+        images11.add(R.drawable.images5);
+        images11.add(R.drawable.images7);
+
+        adapter = new RecyclerAdapter(this, titles, images11);
+
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
+
+        dataList.setLayoutManager(gridLayoutManager);
+        dataList.setAdapter(adapter);
 
     }
 
