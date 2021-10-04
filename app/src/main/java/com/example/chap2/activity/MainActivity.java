@@ -28,35 +28,43 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_main);
+        try{
 
-        topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animate);
-        bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animate);
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            setContentView(R.layout.activity_main);
 
-        image = findViewById(R.id.imageView);
-        logo = findViewById(R.id.shopAppId);
-        slogan = findViewById(R.id.buyOnlineId);
+            topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animate);
+            bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animate);
 
-        image.setAnimation(topAnim);
-        logo.setAnimation(bottomAnim);
-        slogan.setAnimation(bottomAnim);
+            image = findViewById(R.id.imageView);
+            logo = findViewById(R.id.shopAppId);
+            slogan = findViewById(R.id.buyOnlineId);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(MainActivity.this, Dashboard.class);
-                //startActivity( intent );
-                //finish(); //imp
+            image.setAnimation(topAnim);
+            logo.setAnimation(bottomAnim);
+            slogan.setAnimation(bottomAnim);
 
-                Pair[] pairs = new Pair[2];
-                pairs[0] = new Pair<View, String>(image, "logo_img");
-                pairs[1] = new Pair<View, String>(logo, "logo_text");
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent(MainActivity.this, Dashboard.class);
+                    //startActivity( intent );
+                    //finish(); //imp
 
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, pairs);
-                startActivity(intent,options.toBundle());
-                finish();
-            }
-        }, SPLASH_SCREEN);
+                    Pair[] pairs = new Pair[2];
+                    pairs[0] = new Pair<View, String>(image, "logo_img");
+                    pairs[1] = new Pair<View, String>(logo, "logo_text");
+
+                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, pairs);
+                    startActivity(intent,options.toBundle());
+                    finish();
+                }
+            }, SPLASH_SCREEN);
+
+        }
+        catch(Exception ex){
+            ex.printStackTrace();
+        }
+
     }
 }

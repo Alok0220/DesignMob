@@ -16,11 +16,17 @@ public class SellActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sell);
 
-        Intent i = getIntent();
+        try{
+            Intent i = getIntent();
 
-        int position = i.getExtras().getInt("id");
-        ImageProductAdapter imageAdapter = new ImageProductAdapter(this);
-        ImageView imageView = (ImageView) findViewById(R.id.fullImgId);
-        imageView.setImageResource(imageAdapter.thumbImages[position]);
+            int position = i.getExtras().getInt("id");
+            ImageProductAdapter imageAdapter = new ImageProductAdapter(this);
+            ImageView imageView = (ImageView) findViewById(R.id.fullImgId);
+            imageView.setImageResource(imageAdapter.thumbImages[position]);
+        }
+        catch(Exception ex){
+            ex.printStackTrace();
+        }
+
     }
 }

@@ -16,16 +16,22 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_regidter);
 
-        Button backBtn = findViewById(R.id.backBtnId);
+        try{
+            Button backBtn = findViewById(R.id.backBtnId);
 
-        backBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(RegisterActivity.this, Dashboard.class);
-                startActivity(i);
-                finish();
-            }
-        });
+            backBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(RegisterActivity.this, Dashboard.class);
+                    startActivity(i);
+                    finish();
+                }
+            });
+        }
+        catch(Exception ex) {
+            ex.printStackTrace();
+        }
+
     }
 
 

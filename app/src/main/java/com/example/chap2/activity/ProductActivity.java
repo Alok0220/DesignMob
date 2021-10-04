@@ -27,58 +27,70 @@ public class ProductActivity extends AppCompatActivity implements SharedPrefInte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product);
 
-        sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
+        try{
 
-        email = sharedpreferences.getString(EMAIL_KEY, null);
+            sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
 
-        //TextView welocomeTV = findViewById(R.id.showEmailId);
-        //welocomeTV.setText("Welcome \n"+ email);
-        Button logoutBtn = findViewById(R.id.logoutProId);
+            email = sharedpreferences.getString(EMAIL_KEY, null);
 
-        logoutBtn.setOnClickListener(new View.OnClickListener(){
+            //TextView welocomeTV = findViewById(R.id.showEmailId);
+            //welocomeTV.setText("Welcome \n"+ email);
+            Button logoutBtn = findViewById(R.id.logoutProId);
 
-            @Override
-            public void onClick(View v){
-                SharedPreferences.Editor editor = sharedpreferences.edit();
+            logoutBtn.setOnClickListener(new View.OnClickListener(){
 
-                editor.clear();
+                @Override
+                public void onClick(View v){
+                    SharedPreferences.Editor editor = sharedpreferences.edit();
 
-                editor.apply();
+                    editor.clear();
 
-                Intent i = new Intent(ProductActivity.this, Dashboard.class);
-                startActivity(i);
-                finish();
-            }
-        });
+                    editor.apply();
+
+                    Intent i = new Intent(ProductActivity.this, Dashboard.class);
+                    startActivity(i);
+                    finish();
+                }
+            });
 
 
-        GridView gv = (GridView) findViewById(R.id.gviewProId);
-        gv.setAdapter(new ImageProductAdapter(this));
-        gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                //Toast.makeText(HomeActivity.this, "Image Position: " + position, Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(ProductActivity.this, SellActivity.class);
+            GridView gv = (GridView) findViewById(R.id.gviewProId);
+            gv.setAdapter(new ImageProductAdapter(this));
+            gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                    //Toast.makeText(HomeActivity.this, "Image Position: " + position, Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(ProductActivity.this, SellActivity.class);
 
-                i.putExtra("id", position);
-                startActivity(i);
+                    i.putExtra("id", position);
+                    startActivity(i);
 
-            }
-        });
+                }
+            });
+
+        }
+        catch(Exception ex){
+            ex.printStackTrace();
+        }
 
     }
 
     @Override
     protected void onStart(){
         super.onStart();
+        try{
+            email = sharedpreferences.getString(EMAIL_KEY, null);
+            password = sharedpreferences.getString(PASSWORD_KEY, null);
 
-        email = sharedpreferences.getString(EMAIL_KEY, null);
-        password = sharedpreferences.getString(PASSWORD_KEY, null);
+            if(email == null && password == null){
+                Intent i = new Intent(ProductActivity.this, Dashboard.class);
 
-        if(email == null && password == null){
-            Intent i = new Intent(ProductActivity.this, Dashboard.class);
-
-            startActivity(i);
-            //finish();
+                startActivity(i);
+                //finish();
+            }
         }
+        catch(Exception ex){
+            ex.printStackTrace();
+        }
+
     }
 }

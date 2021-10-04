@@ -34,29 +34,29 @@ public class HomeActivity extends AppCompatActivity implements SharedPrefInterfa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
+        try{
+            sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
+            email = sharedpreferences.getString(EMAIL_KEY, null);
 
-        email = sharedpreferences.getString(EMAIL_KEY, null);
+            //TextView welocomeTV = findViewById(R.id.showEmailId);
+            //welocomeTV.setText("Welcome \n"+ email);
+            Button logoutBtn = findViewById(R.id.logoutId);
 
-        //TextView welocomeTV = findViewById(R.id.showEmailId);
-        //welocomeTV.setText("Welcome \n"+ email);
-        Button logoutBtn = findViewById(R.id.logoutId);
+            logoutBtn.setOnClickListener(new View.OnClickListener(){
 
-        logoutBtn.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    SharedPreferences.Editor editor = sharedpreferences.edit();
 
-            @Override
-            public void onClick(View v){
-                SharedPreferences.Editor editor = sharedpreferences.edit();
+                    editor.clear();
 
-                editor.clear();
+                    editor.apply();
 
-                editor.apply();
-
-                Intent i = new Intent(HomeActivity.this, Dashboard.class);
-                startActivity(i);
-                finish();
-            }
-        });
+                    Intent i = new Intent(HomeActivity.this, Dashboard.class);
+                    startActivity(i);
+                    finish();
+                }
+            });
 
 
         /*GridView gv = (GridView) findViewById(R.id.gviewProId);
@@ -72,29 +72,31 @@ public class HomeActivity extends AppCompatActivity implements SharedPrefInterfa
             }
         });*/
 
-        dataList = findViewById(R.id.recyclerId);
+            dataList = findViewById(R.id.recyclerId);
 
-        titles = new ArrayList<>();
-        images11 = new ArrayList<>();
+            titles = new ArrayList<>();
+            images11 = new ArrayList<>();
 
-        titles.add("First");
-        titles.add("Second");
-        titles.add("Thrid");
-        titles.add("Fourth");
+            titles.add("First");
+            titles.add("Second");
+            titles.add("Thrid");
+            titles.add("Fourth");
 
-        images11.add(R.drawable.images2);
-        images11.add(R.drawable.images3);
-        images11.add(R.drawable.images5);
-        images11.add(R.drawable.images7);
+            images11.add(R.drawable.images2);
+            images11.add(R.drawable.images3);
+            images11.add(R.drawable.images5);
+            images11.add(R.drawable.images7);
 
-        adapter = new RecyclerAdapter(this, titles, images11);
+            adapter = new RecyclerAdapter(this, titles, images11);
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
+            GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
 
-        dataList.setLayoutManager(gridLayoutManager);
-        dataList.setAdapter(adapter);
-
-
+            dataList.setLayoutManager(gridLayoutManager);
+            dataList.setAdapter(adapter);
+        }
+        catch(Exception ex){
+            ex.printStackTrace();
+        }
 
     }
 
@@ -102,14 +104,20 @@ public class HomeActivity extends AppCompatActivity implements SharedPrefInterfa
     protected void onStart(){
         super.onStart();
 
-        email = sharedpreferences.getString(EMAIL_KEY, null);
-        password = sharedpreferences.getString(PASSWORD_KEY, null);
+        try{
+            email = sharedpreferences.getString(EMAIL_KEY, null);
+            password = sharedpreferences.getString(PASSWORD_KEY, null);
 
-        if(email == null && password == null){
-            Intent i = new Intent(HomeActivity.this, Dashboard.class);
+            if(email == null && password == null){
+                Intent i = new Intent(HomeActivity.this, Dashboard.class);
 
-            startActivity(i);
-            //finish();
+                startActivity(i);
+                //finish();
+            }
         }
+        catch(Exception ex){
+            ex.printStackTrace();
+        }
+
     }
 }

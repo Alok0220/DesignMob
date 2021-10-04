@@ -36,11 +36,19 @@ public class ImageAdapter extends BaseAdapter {
     // create a new ImageView for each item referenced by the Adapter
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ImageView imageView = new ImageView(mContext);
-        imageView.setLayoutParams(new GridView.LayoutParams(200, 200));
-        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        imageView.setPadding(8, 8, 8, 8);
-        imageView.setImageResource(thumbImages[position]);
+
+        ImageView imageView = null;
+        try{
+            imageView = new ImageView(mContext);
+            imageView.setLayoutParams(new GridView.LayoutParams(200, 200));
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            imageView.setPadding(8, 8, 8, 8);
+            imageView.setImageResource(thumbImages[position]);
+        }
+        catch(Exception ex){
+            ex.printStackTrace();
+        }
+
         return imageView;
     }
 
