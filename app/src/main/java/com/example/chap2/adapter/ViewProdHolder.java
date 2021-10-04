@@ -42,7 +42,7 @@ public class ViewProdHolder extends RecyclerView.ViewHolder{
             public void onClick(View v) {
                 Intent i = new Intent(context, SellActivity.class);
 
-                i.putExtra("id", 1);
+                i.putExtra("id", 1); //use key
                 context.startActivity(i);
             }
         });
