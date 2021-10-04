@@ -15,6 +15,7 @@ Design App
 #### ----
 #### Network Related - 02/10/21 - 03/10/21
 #### Changes to UI Design - 02/10/21 - 03/10/21
+#### Project restructure - 02/10/21 - 03/10/21
 #### ----
 #### Final Tasks -
 
