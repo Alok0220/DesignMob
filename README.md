@@ -17,7 +17,7 @@ Design App
 #### Changes to UI Design - 02/10/21 - 03/10/21
 #### Project restructure - 02/10/21 - 03/10/21
 #### ----
-#### Final Tasks -
+#### Final Tasks - 9/10/21 - 10/10/21
 #### - Database changes
 #### - UI integration
 ### --------------------------------------------------------
