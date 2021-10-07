@@ -79,13 +79,13 @@ public class HomeActivity extends AppCompatActivity implements SharedPrefInterfa
 
             titles.add("First");
             titles.add("Second");
-            titles.add("Thrid");
-            titles.add("Fourth");
+            titles.add("Third");
+
 
             images11.add(R.drawable.images2);
             images11.add(R.drawable.images3);
             images11.add(R.drawable.images5);
-            images11.add(R.drawable.images7);
+
 
             adapter = new RecyclerAdapter(this, titles, images11);
 
