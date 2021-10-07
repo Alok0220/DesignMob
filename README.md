@@ -22,5 +22,9 @@ Design App
 #### - UI integration
 ### --------------------------------------------------------
 ![splash.png](https://github.com/Alok0220/DesignMob/blob/main/app/src/main/res/drawable/splash.png)
+![splash2.png](https://github.com/Alok0220/DesignMob/blob/main/app/src/main/res/drawable/splash2.png)
+![splash3.png](https://github.com/Alok0220/DesignMob/blob/main/app/src/main/res/drawable/splash3.png)
+![splash4.png](https://github.com/Alok0220/DesignMob/blob/main/app/src/main/res/drawable/splash4.png)
+![splash5.png](https://github.com/Alok0220/DesignMob/blob/main/app/src/main/res/drawable/splash5.png)
 
 
