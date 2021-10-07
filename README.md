@@ -21,5 +21,6 @@ Design App
 #### - Database changes
 #### - UI integration
 ### --------------------------------------------------------
+!splash.png(https://github.com/Alok0220/DesignMob/blob/main/app/src/main/res/drawable/splash.png)
 
 
