@@ -20,6 +20,8 @@ Design App
 #### Final Tasks - 9/10/21 - 10/10/21
 #### - Database changes
 #### - UI integration
+#### - Notification Box
+#### - Show Error Box
 ### --------------------------------------------------------
 ![splash.png](https://github.com/Alok0220/DesignMob/blob/main/app/src/main/res/drawable/splash.png)
 ![splash2.png](https://github.com/Alok0220/DesignMob/blob/main/app/src/main/res/drawable/splash2.png)
