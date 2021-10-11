@@ -28,7 +28,7 @@ Design App
 ![splash4.png](https://github.com/Alok0220/DesignMob/blob/main/app/src/main/res/drawable/splash4.png)
 ![splash5.png](https://github.com/Alok0220/DesignMob/blob/main/app/src/main/res/drawable/splash5.png)
 ![splash6.png](https://github.com/Alok0220/DesignMob/blob/main/app/src/main/res/drawable/splash6.png)
-![splash7.png](https://github.com/Alok0220/DesignMob/blob/main/app/src/main/res/drawable/splash7.png)
+
 
 
 
