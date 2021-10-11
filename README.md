@@ -18,9 +18,9 @@ Design App
 #### Project restructure - 02/10/21 - 03/10/21
 #### ----
 #### Final Tasks - 9/10/21 - 10/10/21
-#### - Database changes
-#### - UI integration
-#### - Show Error Box
+#### - Database changes - 9/10/21 - 10/10/21
+#### - UI integration - 9/10/21 - 10/10/21
+#### - Show Error Box - 9/10/21 - 10/10/21
 ### --------------------------------------------------------
 ![splash.png](https://github.com/Alok0220/DesignMob/blob/main/app/src/main/res/drawable/splash.png)
 ![splash2.png](https://github.com/Alok0220/DesignMob/blob/main/app/src/main/res/drawable/splash2.png)
