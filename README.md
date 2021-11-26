@@ -1,7 +1,7 @@
 # DesignMob
 Design App
 
-## Android APP @ www.joffer.nz
+## Android APP, ECommerce App Developed for Joffer Systems LTD @ www.joffer.nz
 
 
 ### --------------------------------------------------------
