@@ -8,7 +8,7 @@ Design App
 
 ### Recent Changes, Not Committed On GitHub
 
-#### Android Ecommerce Complete 
+#### Android Ecommerce App Complete 
 
 ### --------------------------------------------------------
 ![splash.png](https://github.com/Alok0220/DesignMob/blob/main/app/src/main/res/drawable/splash.png)
